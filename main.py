@@ -5,7 +5,7 @@ Run with:  uvicorn main:app --reload --port 8000
 (or just run `python run_all.py` to launch backend + frontend together)
 """
 
-from fastapi import FastAPI, Request
+from fastapi import Depends, FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import logging
@@ -17,6 +17,7 @@ from modules.module3_outreach import router as outreach_router
 from modules.module4_scoring import router as scoring_router
 from modules.module5_conversation import router as conversation_router
 from modules.module6_dashboard import router as dashboard_router
+from modules.auth import current_user, router as auth_router
 
 app = FastAPI(title="SalesGenie AI Backend", version="0.1.0")
 
@@ -52,9 +53,10 @@ def root():
 
 
 # Mount each module under its own prefix.
-app.include_router(leads_router, prefix="/leads", tags=["Module 1 - Leads"])
-app.include_router(intelligence_router, prefix="/intelligence", tags=["Module 2 - Intelligence"])
-app.include_router(outreach_router, prefix="/outreach", tags=["Module 3 - Outreach"])
-app.include_router(scoring_router, prefix="/scoring", tags=["Module 4 - Scoring"])
-app.include_router(conversation_router, prefix="/conversation", tags=["Module 5 - Conversation"])
-app.include_router(dashboard_router, prefix="/dashboard", tags=["Module 6 - Dashboard"])
+app.include_router(auth_router, prefix="/auth", tags=["Authentication"])
+app.include_router(leads_router, prefix="/leads", tags=["Module 1 - Leads"], dependencies=[Depends(current_user)])
+app.include_router(intelligence_router, prefix="/intelligence", tags=["Module 2 - Intelligence"], dependencies=[Depends(current_user)])
+app.include_router(outreach_router, prefix="/outreach", tags=["Module 3 - Outreach"], dependencies=[Depends(current_user)])
+app.include_router(scoring_router, prefix="/scoring", tags=["Module 4 - Scoring"], dependencies=[Depends(current_user)])
+app.include_router(conversation_router, prefix="/conversation", tags=["Module 5 - Conversation"], dependencies=[Depends(current_user)])
+app.include_router(dashboard_router, prefix="/dashboard", tags=["Module 6 - Dashboard"], dependencies=[Depends(current_user)])

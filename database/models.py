@@ -2,15 +2,10 @@
 database/models.py
 Shared ORM models for SalesGenie AI.
 
-NOTE for team: if module1/module2 teammates already created a models.py with
-Lead / CompanyInsight classes, MERGE this file with theirs rather than
-overwriting — keep column names identical so foreign keys line up. This file
-adds OutreachCampaign (new, for Module 3) and includes the others so
-Module 3 can run standalone if needed.
 """
 
 from sqlalchemy import (
-    Column, Integer, String, Text, TIMESTAMP, ForeignKey, ARRAY, func
+    Boolean, Column, Integer, String, Text, TIMESTAMP, ForeignKey, ARRAY, func
 )
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import relationship
@@ -23,8 +18,10 @@ class User(Base):
     user_id = Column(Integer, primary_key=True, index=True)
     name = Column(String(150), nullable=False)
     email = Column(String(150), unique=True, nullable=False)
+    password_hash = Column(String(255), nullable=True)
     role = Column(String(50))
     department = Column(String(100))
+    is_active = Column(Boolean, nullable=False, default=True)
     created_at = Column(TIMESTAMP, server_default=func.now())
 
 

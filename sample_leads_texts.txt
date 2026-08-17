@@ -1,0 +1,5 @@
+AeroMind Robotics,Manufacturing,Siddharth Kulkarni,Chief Innovation Officer,siddharth.kulkarni@aeromind.in,+91-9876501501,250-500,$42M - $58M,Pune,Series B,New,Enterprise,225000
+HealthAxis Diagnostics,Biotechnology,Pooja Nambiar,Director of Clinical Partnerships,pooja.nambiar@healthaxis.in,+91-9876501502,100-250,$22M - $36M,Bengaluru,Series A,Contacted,Mid-Market,112000
+EduLeap Learning,EdTech,Harish Krishnan,VP Business Development,harish.krishnan@eduleap.in,+91-9876501503,50-100,$9M - $16M,Coimbatore,Seed,Qualified,SMB,47000
+BluePort Logistics,Transportation,Deepika Arora,Chief Operations Officer,deepika.arora@blueportlogistics.in,+91-9876501504,500-1000,$100M - $145M,Navi Mumbai,Series C,Negotiation,Enterprise,335000
+SmartGrid Utilities,Energy,Ritesh Desai,Head of Enterprise Sales,ritesh.desai@smartgridutilities.in,+91-9876501505,250-500,$48M - $68M,Gandhinagar,Series B,Proposal Sent,Enterprise,245000
