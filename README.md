@@ -51,6 +51,7 @@ Edit `.env` with your own values:
 ```dotenv
 DATABASE_URL=postgresql://postgres:<your-local-password>@localhost:5432/salesgenie
 GROQ_API_KEY=gsk_...
+GROQ_MODEL=openai/gpt-oss-120b
 ```
 
 `.env` is git-ignored — never commit real credentials. Each teammate keeps
