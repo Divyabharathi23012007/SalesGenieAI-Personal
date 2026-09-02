@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-09-02 19:17:32",
+  "total": 16,
+  "passed": 16,
+  "failed": 0,
+  "pass_rate": 100.0,
+  "results": [
+    {
+      "suite": "Auth & Security",
+      "test": "test_auth_scrypt_hashing",
+      "status": "PASSED",
+      "duration_ms": 681.42,
+      "error": null
+    },
+    {
+      "suite": "Auth & Security",
+      "test": "test_auth_token_lifecycle",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Auth & Security",
+      "test": "test_auth_email_normalisation",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 1 Leads",
+      "test": "test_module1_lead_attributes_and_defaults",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 1 Leads",
+      "test": "test_module1_stage_transitions",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 1 Leads",
+      "test": "test_module1_interaction_distinction",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 2 Intelligence",
+      "test": "test_module2_insight_structure",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 3 Outreach",
+      "test": "test_module3_campaign_status_flow",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 3 Outreach",
+      "test": "test_module3_email_template_parameters",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 4 Scoring",
+      "test": "test_module4_parsing_helpers",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 4 Scoring",
+      "test": "test_module4_lead_score_calculation_tiers",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 4 Scoring",
+      "test": "test_module4_whatif_simulator_scenarios",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 5 Conversations",
+      "test": "test_module5_crm_sync_logging",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 5 Conversations",
+      "test": "test_module5_transcript_action_items_extraction",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 6 Dashboard",
+      "test": "test_module6_kpi_calculations",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    },
+    {
+      "suite": "Module 6 Dashboard",
+      "test": "test_module6_kanban_stage_aggregation",
+      "status": "PASSED",
+      "duration_ms": 0.0,
+      "error": null
+    }
+  ]
+}
