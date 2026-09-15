@@ -743,7 +743,11 @@ def create_presentation():
     p.font.bold = True
     p.font.color.rgb = RGBColor(56, 189, 248)
 
-    output_filename = "SalesGenie_Day29_Regression_UAT_Presentation.pptx"
+    output_filename = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "docs",
+        "SalesGenie_Day29_Regression_UAT_Presentation.pptx",
+    )
     prs.save(output_filename)
     print(f"[SUCCESS] PowerPoint presentation saved to {output_filename}")
 

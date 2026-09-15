@@ -19,11 +19,14 @@ summarization, dashboard aggregation) before this was handed over.
 salesgenie/
 ├── .env.example
 ├── .gitignore
+├── docs/                     # project documentation and delivery artifacts
 ├── main.py                   # FastAPI backend — mounts all 6 module routers
 ├── app.py                    # Streamlit frontend — all 6 modules wired up
 ├── run_all.py                 # starts backend + frontend together
 ├── seed_data.py                # inserts 4 sample leads
 ├── requirements.txt
+├── sample_data/              # CSV and text fixtures for demos
+├── tests/                    # regression tests and generated test report
 ├── database/
 │   ├── connection.py           # shared PostgreSQL engine/session (SQLAlchemy)
 │   └── models.py               # Lead, CompanyInsight, OutreachCampaign,
@@ -68,6 +71,16 @@ CREATE DATABASE salesgenie;
 python seed_data.py     # only needed once, or if the leads table is empty
 python run_all.py       # starts FastAPI on :8000 and Streamlit on :8502
 ```
+
+Run the automated checks from the project root:
+```bash
+pytest tests
+python tests/run_regression_tests.py
+```
+
+The supporting PDFs, spreadsheet, presentation, and this guide are in
+`docs/`. Sample CSV and transcript data are in `sample_data/`. The standalone
+regression runner writes its report to `tests/regression_test_report.json`.
 
 http://127.0.0.1:8000/docs/ for API Endpoints
 

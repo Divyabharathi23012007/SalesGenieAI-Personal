@@ -6,6 +6,11 @@ import sys
 import os
 import json
 import time
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+TESTS_DIR = PROJECT_ROOT / "tests"
+sys.path.insert(0, str(PROJECT_ROOT))
 
 # Ensure proper encoding
 sys.stdout.reconfigure(encoding="utf-8")
@@ -357,7 +362,8 @@ print(f"Failed Tests         : {failed_tests}")
 print(f"Pass Rate            : {pass_rate}%")
 print("=" * 60)
 
-with open("regression_test_report.json", "w") as f:
+report_path = TESTS_DIR / "regression_test_report.json"
+with report_path.open("w", encoding="utf-8") as f:
     json.dump({
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
         "total": total_tests,
@@ -367,4 +373,4 @@ with open("regression_test_report.json", "w") as f:
         "results": test_results
     }, f, indent=2)
 
-print("[OK] Test report exported to regression_test_report.json\n")
+print(f"[OK] Test report exported to {report_path}\n")
